@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konark Sun Temple — Project</title>
+<style>
+  :root{
+    --bg: #0A0F2F;
+    --panel:#101445;
+    --muted:#d4d7e3;
+    --accent:#ffcc66;
+    --glass: rgba(255,255,255,0.04);
+    --card-shadow: 0 18px 50px rgba(0,0,0,0.7);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    height:100%;
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    color:#eaeaea;
+    background:linear-gradient(180deg,#0A0F2F,#1A1F5C 160%);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  nav{
+    position:fixed;top:0;left:0;right:0;height:64px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 26px;background:rgba(10,15,55,0.65);
+    backdrop-filter: blur(7px);border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:999;
+  }
+  .brand{font-weight:700;color:var(--accent);letter-spacing:0.6px;font-size:18px}
+  .nav-links{display:flex;gap:18px;align-items:center}
+  .nav-links a{color:#cfd2e8;font-weight:600;padding:8px 12px;border-radius:10px;transition:all .18s}
+  .nav-links a:hover{transform:translateY(-3px);color:var(--bg);background:var(--accent)}
+  .container{max-width:1100px;margin:110px auto 40px;padding:0 18px}
+  .hero{display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:center}
+  .hero-card{background:rgba(255,255,255,0.03);padding:26px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.05);box-shadow:var(--card-shadow)}
+  .hero-card h1{margin:0 0 10px;color:var(--accent);font-size:30px}
+  .hero-card p{color:var(--muted);margin:0 0 16px;font-size:15.5px;line-height:1.45}
+  .features{display:flex;gap:10px;flex-wrap:wrap}
+  .feature{background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);font-weight:600;font-size:13px}
+  .hero-image{height:360px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
+  .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+  .card{margin-top:20px;background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);box-shadow:0 8px 30px rgba(0,0,0,0.65)}
+  .card h2{color:var(--accent);margin-top:0}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .muted{color:var(--muted)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  .gallery-card{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);height:200px;display:flex;align-items:center;justify-content:center}
+  .gallery-card img{width:100%;height:100%;object-fit:cover}
+  .fade-up{opacity:0;transform:translateY(18px);transition:all .6s cubic-bezier(.2,.9,.2,1);}
+  .in-view{opacity:1;transform:none;}
+  footer{margin-top:26px;text-align:center;color:var(--muted);padding:26px 0;border-top:1px solid rgba(255,255,255,0.06)}
+  @media (max-width:980px){.hero{grid-template-columns:1fr}.hero-image{height:240px}.nav-links{display:none}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.gallery-grid{grid-template-columns:1fr}}
+  .kbd{background:rgba(255,255,255,0.03);padding:4px 8px;border-radius:6px;color:var(--muted);font-weight:700}
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">Konark Sun Temple</div>
+  <div class="nav-links">
+    <a href="#overview">Home</a>
+    <a href="#history">History</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#materials">Materials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#conclusion">Conclusion</a>
+  </div>
+</nav>
+<main class="container">
+
+  <section class="hero" id="overview">
+    <div class="hero-card fade-up in-view">
+      <h1>Konark Sun Temple — Stone Chariot of Surya</h1>
+      <p class="muted">Built in the 13th century by King Narasimhadeva I, the Konark Sun Temple in Odisha is designed as a colossal chariot of the Sun God with 24 carved wheels and 7 horses. The wheels acted as sundials — a grand fusion of art, astronomy and engineering.</p>
+
+      <div class="features" style="margin-top:14px">
+        <div class="feature">⛅ Solar alignment</div>
+        <div class="feature">🕰 Sundial wheels</div>
+        <div class="feature">🛠 Traditional materials</div>
+        <div class="feature">📸 Gallery &amp; diagrams</div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <h2>Quick overview</h2>
+        <div class="two-col">
+          <div>
+            <p class="muted"><strong>Symbolism:</strong> 7 horses → days of week; 24 wheels → hours of day. Wheels also served as precise sundials.</p>
+          </div>
+          <div>
+            <p class="muted"><strong>UNESCO:</strong> Declared a World Heritage Site in 1984 for its artistic &amp; engineering significance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image fade-up in-view" aria-hidden="true">
+      <img src="images/hero.jpg" alt="Konark Sun Temple hero image">
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="history" style="margin-top:22px">
+    <h2>History &amp; Location</h2>
+    <p class="muted">The Konark Sun Temple stands on the coast near Konark, Odisha. Built in the 13th century by King Narasimhadeva I of the Eastern Ganga dynasty, it was dedicated to Surya — the Sun God. The main tower (Shikhara) has collapsed over time, but the Jagamohana (audience hall) and the carved wheels remain as testimony to the builders' skill.</p>
+  </section>
+
+  <section class="card fade-up in-view" id="architecture">
+    <h2>Architecture &amp; Symbolism</h2>
+    <p class="muted">The temple is designed as a massive chariot pulled by seven horses and mounted on 24 intricately carved wheels. Each wheel is about 12 feet in diameter and many have eight spokes, representing the time divisions known as praharas. The building shows deep astronomical alignment and symbolic sculpture (including scenes of life, deities, dancers, animals, and erotic sculptures similar in theme to Khajuraho).</p>
+
+    <div style="display:flex;gap:14px;margin-top:12px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <div class="card muted" style="padding:12px">
+          <h3 style="margin:6px 0;color:var(--accent)">Design features</h3>
+          <ul class="muted" style="margin:6px 0 0 18px;line-height:1.6">
+            <li>Sundial wheels used for precise timekeeping</li>
+            <li>East-facing entrance to catch morning sun</li>
+            <li>Jagamohana (assembly hall) still standing</li>
+            <li>Precision carvings showing divine scenes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="width:360px" aria-hidden="true">
+        <img src="images/diagram1.jpg" alt="Diagram placeholder" style="width:100%;height:100%;border-radius:10px;overflow:hidden">
+      </div>
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="materials">
+    <h2>Materials Used</h2>
+    <p class="muted">The temple was constructed using several stone types: chlorite, laterite, khondalite, and sandstone — each chosen for its carving properties and strength. Iron clamps and dowels were used historically to join stones. Some legends also describe a magnet in the top dome (now myth), which gave the structure the nickname "Black Pagoda" among sailors.</p>
+    <div class="two-col" style="margin-top:12px">
+      <div class="muted">
+        <h3 style="color:var(--accent)">Common materials</h3>
+        <ul style="line-height:1.6;margin-left:18px">
+          <li>Chlorite (for carvings)</li>
+          <li>Laterite (core structures)</li>
+          <li>Khondalite &amp; sandstone (structural blocks)</li>
+          <li>Iron clamps &amp; dowels</li>
+        </ul>
+      </div>
+      <div class="muted">
+        <h3 style="color:var(--accent)">Cultural notes</h3>
+        <p style="margin:6px 0">Legends of Dharma Pada (a child hero) and the temple's maritime stories are part of local folklore around Konark. The site is preserved as a symbol of India’s heritage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="sundial" style="margin-top:18px">
+    <h2>Sundial Wheels &amp; Timekeeping</h2>
+    <p class="muted">The 24 giant wheels are not merely decorative. Each wheel and its spokes were used as sundials: their shadows indicated time divisions during the day, demonstrating sophisticated timekeeping without modern instruments.</p>
+
+    <div style="display:flex;gap:14px;align-items:center;margin-top:12px;flex-wrap:wrap">
+      <div style="flex:1;min-width:240px">
+        <p class="muted">The wheels are placed along the plinth. Many have 8 spokes (praharas). Their precise carving allowed the builders to track time accurately — evidence of advanced astronomical understanding in the 13th century.</p>
+      </div>
+      <div style="width:320px">
+        <img src="images/wheel.jpg" alt="Wheel illustration" style="width:100%;height:100%;border-radius:8px">
+      </div>
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="diagrams" style="margin-top:18px">
+    <h2>Diagrams &amp; Visuals</h2>
+    <p class="muted"></p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+      <div style="flex:1;min-width:280px" aria-hidden="true">
+        <img src="images/diagram2.jpg" alt="Sketch placeholder" style="width:100%;height:100%;border-radius:10px;display:block">
+      </div>
+      <div style="flex:1;min-width:280px" aria-hidden="true">
+        <img src="images/plan.jpg" alt="Blueprint placeholder" style="width:100%;height:100%;border-radius:10px;display:block">
+      </div>
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="gallery" style="margin-top:18px">
+    <h2>Gallery</h2>
+    <p class="muted"></p>
+    <div class="gallery-grid" style="margin-top:12px">
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery1.jpg" alt=""></div>
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery2.jpg" alt=""></div>
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery3.jpg" alt=""></div>
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery1.jpg" alt=""></div>
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery2.jpg" alt=""></div>
+      <div class="gallery-card" aria-hidden="true"><img src="images/gallery3.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <section class="card fade-up in-view" id="conclusion" style="margin-top:18px">
+    <h2>Conclusion</h2>
+    <p class="muted">The Konark Sun Temple stands as a lasting icon of India's engineering, astronomical knowledge, and sculptural mastery. Today it remains a powerful symbol of our heritage and a vivid lesson in the historical marriage of art and science.</p>
+  </section>
+
+  <footer>
+    <div class="muted">Prepared for college project • Paste this file into DevTools (Edit as HTML) to preview instantly. • Do not refresh after pasting.</div>
+    <div style="margin-top:8px;font-size:13px;color:var(--muted)">Tip: to replace any placeholder with a real photo, replace the <code>&lt;img src=&quot;images/...&quot;&gt;</code> with your real file name in the images/ folder.</div>
+  </footer>
+
+</main>
+
+<script>
+  (function(){
+    const items = document.querySelectorAll('.fade-up');
+    function reveal(){
+      const h = window.innerHeight;
+      items.forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if(r.top < h - 60) el.classList.add('in-view');
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('resize', reveal);
+    reveal();
+  })();
+</script>
+
+</body>
+</html>
